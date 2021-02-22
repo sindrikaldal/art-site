@@ -5,10 +5,10 @@ import Painting from "./Painting.svelte";
      name: string
  }[] = [{
      src: '/images/image1.jpg',
-     name: 'image1'
+     name: 'NOT a picture by me'
  }, {
      src: '/images/image2.jpg',
-     name: 'image2'
+     name: 'sample image - rocker'
  }]
 </script>
 

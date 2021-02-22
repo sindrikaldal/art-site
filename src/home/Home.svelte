@@ -1,5 +1,5 @@
 <script lang="ts">
-    console.log("process.env", globalThis.env.CLOUDINARY_URL)
+
 </script>
 
 <style>

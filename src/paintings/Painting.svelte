@@ -8,6 +8,7 @@
         grid-column: span 1;
         display: grid;
         flex-direction: column;
+        padding: 10px;
     }
     .title {
         grid-column: 1 / -1;
