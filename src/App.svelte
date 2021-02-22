@@ -1,31 +1,20 @@
 <script lang="ts">
-	import Painting from './Painting.svelte'
+	import { Router, Link, Route } from "svelte-routing";
+	import Home from './home/Home.svelte';
+import Navbar from "./home/Navbar.svelte";
+	import Paintings from "./paintings/Paintings.svelte";
+	export let url = "";
 </script>
 
-<main>
-	<h1>Art by Kaldal!</h1>
-	<Painting url="" name="ye"/>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
-</main>
 
-<style>
-	main {
-		text-align: center;
-		padding: 1em;
-		max-width: 240px;
-		margin: 0 auto;
-	}
+<Router url={url}>
+	<Navbar>
+		<Link to="/">Home</Link>
+		<Link to="paintings">Paintings</Link>
+	</Navbar>
+	<div>		  
+		<Route path="paintings"><Paintings /></Route>
+		<Route path="/"><Home /></Route>
+	</div>
+</Router>
 
-	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
-	}
-
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
-		}
-	}
-</style>
