@@ -3,12 +3,16 @@
     export let name: string;
 </script>
 
-<style>
+<style type="text/scss">
     .image {
-        grid-column: span 1;
+        grid-column: 1 / -1;
         display: grid;
         flex-direction: column;
+        justify-content: center;
         padding: 10px;
+        @media (min-width: 640px) {
+            grid-column: span 1;
+        }
     }
     .title {
         grid-column: 1 / -1;

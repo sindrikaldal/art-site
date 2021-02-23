@@ -3,7 +3,7 @@ import commonjs from '@rollup/plugin-commonjs';
 import resolve from '@rollup/plugin-node-resolve';
 import livereload from 'rollup-plugin-livereload';
 import { terser } from 'rollup-plugin-terser';
-import sveltePreprocess from 'svelte-preprocess';
+import sveltePreprocess, {scss} from 'svelte-preprocess';
 import typescript from '@rollup/plugin-typescript';
 import css from 'rollup-plugin-css-only';
 
@@ -40,7 +40,17 @@ export default {
 	},
 	plugins: [
 		svelte({
-			preprocess: sveltePreprocess({ sourceMap: !production }),
+			preprocess: sveltePreprocess({ 
+				sourceMap: !production, 
+				sass: {
+					sync: true,
+					implementation: require('sass'),
+				},
+				'node-sass': {
+					sync: true,
+					implementation: require('node-sass'),
+				}
+			}),
 			compilerOptions: {
 				// enable run-time checks when not in production
 				dev: !production

@@ -12,17 +12,19 @@ import Painting from "./Painting.svelte";
  }]
 </script>
 
-<style>
+<style type="text/scss">
     .wrapper {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        padding: 0 100px;
-        ;
+        @media (min-width: 640px) {
+            padding: 0 100px;
+        }    
     }
     .title {
         grid-column: 1 / -1;
         justify-self: center
     }
+    
 </style>
 
 <div class="wrapper">

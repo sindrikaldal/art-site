@@ -2,10 +2,12 @@
 
 </script>
 
-<style>
-    .wrapper {
-        margin: 0 200px;
+<style type="text/scss">
+    .wrapper {    
         z-index: 0;
+        @media (min-width: 640px) {
+            margin: 0 200px;
+        }
     }
     .wrapper > p {
         opacity: 0;
