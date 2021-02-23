@@ -18,6 +18,8 @@
         top: 0;
     }
     .menu :global(a) {
+        opacity: 0;
+        transition: opacity 320ms ease;
         font-size: clamp(
             var(--fluid-type-min, 3rem),
             calc(3rem + var(--fluid-type-target, 7vw)),
@@ -26,17 +28,22 @@
         margin-bottom:5px;
         color: #F5DF4D;
     } 
-    .menu :global(a):not(:last-child) {
-        border-bottom: 20px solid;
-        padding-bottom: 16px;
+    .menu :global(a):hover {
+        color: pink;
     } 
     .navbar {
         width: 100%;
         height: 100px;
     }
     .open {
-        opacity: 1
+        opacity: 1;
+        z-index:1;
     }
+    .open :global(a) {
+        opacity: 1;
+        transition-delay: 320ms;
+        
+    } 
     .closed {
         opacity: 0;
         z-index: -1;
@@ -46,11 +53,12 @@
         height: 5px;
         background-color: black;
         margin: 6px 0 0 0;
-        transition: opacity 320ms ease, transform 320ms ease;
+        transition: all 320ms ease;
         transform-origin: left; 
     }
     .line1 {
         transform: rotate(45deg) translate(0px, 1px);;
+        background-color: #F5DF4D;
         
     }
     .line2 {
@@ -58,6 +66,7 @@
     }
     .line3 {
         transform: rotate(-45deg) translate(-3px, 2px);;
+        background-color: #F5DF4D;
     }
     .hamburger {
         cursor: pointer;
@@ -67,7 +76,7 @@
         position: absolute;
         top: 15px;
         left: 15px;
-        z-index: 1;
+        z-index: 99;
     }
      
 </style>
