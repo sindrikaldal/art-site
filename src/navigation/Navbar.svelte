@@ -5,7 +5,7 @@
 
     let open = false;
 
-    const onClick = (open) => open = !open;
+    const onClick = () => open = !open;
  
 </script>
 
