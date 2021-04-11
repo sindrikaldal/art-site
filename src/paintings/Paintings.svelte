@@ -4,11 +4,11 @@ import Painting from "./Painting.svelte";
      src: string,
      name: string
  }[] = [{
-     src: '/images/image1.jpg',
-     name: 'NOT a picture by me'
+     src: '/images/painting-1.webp',
+     name: 'Untitled #1'
  }, {
-     src: '/images/image2.jpg',
-     name: 'sample image - rocker'
+     src: '/images/painting-2.webp',
+     name: 'Untitled #2'
  }]
 </script>
 

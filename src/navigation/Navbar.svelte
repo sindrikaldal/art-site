@@ -9,7 +9,7 @@
  
 </script>
 
-<style>
+<style type="text/scss">
     .menu {
         display: flex;
         justify-content: center;
@@ -24,7 +24,6 @@
     }
     .menu :global(a) {
         opacity: 0;
-        transition: opacity 320ms ease;
         font-size: clamp(
             var(--fluid-type-min, 3rem),
             calc(3rem + var(--fluid-type-target, 7vw)),
@@ -41,8 +40,7 @@
         height: 100px;
     }
     .open {
-        opacity: 1;
-        z-index:1;
+        animation: fadeIn 320ms ease forwards;
     }
     .open :global(a) {
         opacity: 1;
@@ -50,8 +48,30 @@
         
     } 
     .closed {
-        opacity: 0;
-        z-index: -1;
+        animation-delay: 320ms;
+        animation: fadeOut 320ms ease forwards; 
+    }
+
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+            z-index: -1;
+        }
+        100% {
+            opacity: 1;
+            z-index: 1;
+        }
+    }
+
+    @keyframes fadeOut {
+        0% {
+            opacity: 1;
+            z-index: 0;
+        }
+        100% {
+            opacity: 0;
+            z-index: -1;
+        }
     }
 </style>
 
