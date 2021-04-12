@@ -16,11 +16,12 @@
         flex-direction: column;
         align-items: center;
         background-color: grey;
-        transition: opacity 320ms ease;
-        height: 100vh;
+        overflow-x: hidden;
+        height: 100%;
         width: 100%;
-        position: absolute;
-        top: 0;
+        position: fixed;
+        top: 0; 
+        opacity: 0;
     }
     .menu :global(a) {
         opacity: 0;
@@ -40,17 +41,15 @@
         height: 100px;
     }
     .open {
-        animation: fadeIn 320ms ease forwards;
+        animation: fadeIn 0.5s ease-in-out forwards;
     }
     .open :global(a) {
-        opacity: 1;
-        transition-delay: 320ms;
-        
+        animation: fadeIn 0.5s ease-in-out forwards 0.5s;
     } 
     .closed {
-        animation-delay: 320ms;
-        animation: fadeOut 320ms ease forwards; 
+        animation: fadeOut 0.5s ease-in-out forwards;
     }
+
 
     @keyframes fadeIn {
         0% {

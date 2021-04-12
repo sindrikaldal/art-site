@@ -9,7 +9,7 @@
         height: 5px;
         background-color: black;
         transform-origin: center;
-        transition: all 320ms ease;
+        transition: all 0.5s ease;
         
     }
     .line:not(:last-child) {
@@ -40,9 +40,9 @@
         background: transparent;
         outline: none;
         border: none;
-        position: absolute;
-        top: 15px;
-        left: 15px;
+        position: fixed;
+        top: 32px;
+        left: 32px;
         z-index: 99;
     }
     @keyframes topLineOut {

@@ -5,7 +5,8 @@
 <style type="text/scss">
     .wrapper {    
         z-index: 0;
-        @media (min-width: 640px) {
+        margin: 0 50px;
+        @media screen and (min-width: 800px) {
             margin: 0 200px;
         }
     }
@@ -41,7 +42,7 @@
             Welcome to my art page.  
         </p>
         <p>
-            This website was mainly created to test the framework Svelte but I decided to post my (not-so-good-but-getting-better) paintings here for anyone interested.
+            This website was mainly created to test and work on my CSS-skills but I decided to keep track of my art here. Both as an inspiration for me but also for anyone else interested in my progresss.
         </p>
         <p>
             Any possible future art stuff will be posted here. Stay tuned.
